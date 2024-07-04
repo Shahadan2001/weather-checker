@@ -73,7 +73,8 @@ class HomeScreen extends StatelessWidget {
                           "‵Welcome to Weather Checker!\nDiscover the weather in any city at your fingertips.’",
                           style: Constants.subheadTextStyle,
                         ).paddingSymmetric(horizontal: 10.w),
-                        if (state.recentWeatherResponse != null)
+                        if (state.recentWeatherResponse != null &&
+                            state.recentWeatherResponse!.cityName.isNotEmpty)
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
